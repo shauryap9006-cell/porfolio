@@ -1,8 +1,11 @@
 import { create } from 'zustand';
+import { certificates } from '../constants/certificates';
+
+type Certificate = typeof certificates[0];
 
 interface GalleryStore {
-  selectedCert: any | null;
-  setSelectedCert: (cert: any | null) => void;
+  selectedCert: Certificate | null;
+  setSelectedCert: (cert: Certificate | null) => void;
 }
 
 export const useGalleryStore = create<GalleryStore>((set) => ({

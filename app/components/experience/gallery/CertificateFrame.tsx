@@ -110,8 +110,7 @@ const CertificateFrame = ({
 
         {/* The Certificate Image */}
         <Image
-          url={`/portfolio${image}`}
-          alt={title}
+          url={`/porfolio${image}`}
           scale={[4, 2.6]}
           position={[0, 0, 0.08]}
           transparent

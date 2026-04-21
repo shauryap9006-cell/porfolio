@@ -9,9 +9,18 @@ import { certificates } from "@constants";
 import CertificateFrame from "./CertificateFrame";
 import { TouchPanControls } from "../projects/TouchPanControls";
 
-import CertificateModal from "./CertificateModal";
 
-const MovingCloud = ({ seed: initialSeed, y: initialY, z: initialZ, speed: initialSpeed, initialX, color }: any) => {
+
+interface MovingCloudProps {
+  seed: number;
+  y: number;
+  z: number;
+  speed: number;
+  initialX: number;
+  color: string;
+}
+
+const MovingCloud = ({ seed: initialSeed, y: initialY, z: initialZ, speed: initialSpeed, initialX, color }: MovingCloudProps) => {
   const ref = useRef<THREE.Group>(null);
   const [cloudState, setCloudState] = useState({
     seed: initialSeed,
@@ -63,7 +72,7 @@ const MovingCloud = ({ seed: initialSeed, y: initialY, z: initialZ, speed: initi
   );
 };
 
-const GalleryCarousel = ({ onSelect, activeId }: { onSelect: (cert: any) => void, activeId: number | null }) => {
+const GalleryCarousel = ({ onSelect, activeId }: { onSelect: (cert: typeof certificates[0]) => void, activeId: number | null }) => {
   return (
     <group position={[0, 0, -5]}>
       {/* Floating Certificates in a gentle curve/arc for better depth */}
@@ -89,7 +98,7 @@ const GalleryCarousel = ({ onSelect, activeId }: { onSelect: (cert: any) => void
             />
             <CertificateFrame
               {...cert}
-              position={[0, 0, 0] as any}
+              position={new THREE.Vector3(0, 0, 0)}
               forceHover={activeId === i}
               onClick={() => onSelect(cert)}
             />

@@ -2,7 +2,6 @@
 
 import CanvasLoader from "./components/common/CanvasLoader";
 import ScrollWrapper from "./components/common/ScrollWrapper";
-import ThemeTransition from "./components/common/ThemeTransition";
 import Experience from "./components/experience";
 import Footer from "./components/footer";
 import Hero from "./components/hero";
