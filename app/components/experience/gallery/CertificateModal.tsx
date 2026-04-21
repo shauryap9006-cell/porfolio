@@ -3,6 +3,8 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGalleryStore } from "@stores";
+import Image from "next/image";
+
 
 const CertificateModal = () => {
   const { selectedCert, setSelectedCert } = useGalleryStore();
@@ -68,10 +70,13 @@ const CertificateModal = () => {
           <div className="relative group">
             {/* Image Glow */}
             <div className="absolute -inset-4 bg-white/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <img
+            <Image
               src={selectedCert.image}
               alt={selectedCert.title}
+              width={1200}
+              height={800}
               className="relative max-w-full max-h-[65vh] object-contain rounded-xl shadow-2xl border border-white/10"
+              priority
             />
           </div>
         </div>

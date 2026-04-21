@@ -30,7 +30,7 @@ const WindowModel = (props: Partial<THREE.Object3D>) => {
   const handleRef = useRef<THREE.Mesh>(null);
   const windowRef = useRef<THREE.Mesh>(null);
 
-  const { nodes, materials } = useGLTF('models/window.glb', true ) as GLTFResult
+  const { nodes, materials } = useGLTF('models/window.glb', true) as GLTFResult
   const data = useScroll();
   useFrame(() => {
     const b = data.range(0.4, 0.1);
@@ -59,7 +59,7 @@ const WindowModel = (props: Partial<THREE.Object3D>) => {
             castShadow
             receiveShadow
             geometry={nodes['#WIN0003_Window_#WIN0003_Textures_0'].geometry}
-            material={materials.WIN0003_Textures}/>
+            material={materials.WIN0003_Textures} />
           <mesh ref={handleRef}
             castShadow
             receiveShadow

@@ -18,8 +18,7 @@ export const certificates = [
     issuer: "Google",
     date: "April 2026",
     image: "/assets/certificates/Screenshot_19-4-2026_174649_www.coursera.org.jpeg",
-    description:"Professional certification covering network security, threat detection, and incident response using Python and SQL.",
-
+    description: "Professional certification covering network security, threat detection, and incident response using Python and SQL.",
   },
   {
     title: "Front-End Development",

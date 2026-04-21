@@ -20,10 +20,10 @@ const Medal = () => {
       {/* Medal Body */}
       <mesh>
         <cylinderGeometry args={[0.3, 0.3, 0.1, 32]} />
-        <meshPhysicalMaterial 
-          color="#ffd700" 
-          metalness={1} 
-          roughness={0.1} 
+        <meshPhysicalMaterial
+          color="#ffd700"
+          metalness={1}
+          roughness={0.1}
           clearcoat={1}
           emissive="#ffae00"
           emissiveIntensity={0.2}
@@ -38,13 +38,13 @@ const Medal = () => {
   );
 };
 
-const CertificateFrame = ({ 
-  title, 
-  issuer, 
-  date, 
-  image, 
-  description, 
-  position, 
+const CertificateFrame = ({
+  title,
+  issuer,
+  date,
+  image,
+  description,
+  position,
   rotation,
   forceHover,
   onClick
@@ -56,7 +56,7 @@ const CertificateFrame = ({
 
   useEffect(() => {
     if (!frameRef.current) return;
-    const [medal, glass, img, textGroup, glow] = frameRef.current.children;
+    const [,,, textGroup] = frameRef.current.children;
 
     gsap.to(frameRef.current.scale, {
       x: isHighlighted ? 1.15 : 1,
@@ -86,9 +86,9 @@ const CertificateFrame = ({
   }), []);
 
   return (
-    <Float speed={1.5} rotationIntensity={0.2} floatIntensity={0.4} position={position as any}>
-      <group 
-        ref={frameRef} 
+    <Float speed={1.5} rotationIntensity={0.2} floatIntensity={0.4} position={position as THREE.Vector3}>
+      <group
+        ref={frameRef}
         rotation={rotation}
         onPointerOver={() => setHovered(true)}
         onPointerOut={() => setHovered(false)}
@@ -109,11 +109,12 @@ const CertificateFrame = ({
         </mesh>
 
         {/* The Certificate Image */}
-        <Image 
-          url={image} 
-          scale={[4, 2.6]} 
-          position={[0, 0, 0.08]} 
-          transparent 
+        <Image
+          url={`/portfolio${image}`}
+          alt={title}
+          scale={[4, 2.6]}
+          position={[0, 0, 0.08]}
+          transparent
           side={THREE.DoubleSide}
         />
 
@@ -138,7 +139,7 @@ const CertificateFrame = ({
           >
             {issuer} • {date}
           </Text>
-          
+
           {description && (
             <Text
               font="./Vercetti-Regular.woff"

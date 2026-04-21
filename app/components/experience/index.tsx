@@ -27,7 +27,7 @@ const Experience = () => {
       const d = data.range(0.8, 0.2);
       groupRef.current.position.y = d > 0 ? -1.8 : -30; // Pushed back from -1 to -1.8
       groupRef.current.visible = d > 0;
-      
+
       // Enhanced Parallax Sway
       const targetX = -state.pointer.x * (isMobile ? 0.1 : 0.4); // Reversed
       const targetZ = -state.pointer.y * (isMobile ? 0.05 : 0.2); // Reversed
