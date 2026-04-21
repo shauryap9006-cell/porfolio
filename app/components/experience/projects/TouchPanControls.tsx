@@ -118,3 +118,5 @@ export const TouchPanControls = () => {
 
   return null
 }
+
+// modifed by shaurya

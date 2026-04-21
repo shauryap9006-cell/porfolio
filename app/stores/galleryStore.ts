@@ -12,3 +12,5 @@ export const useGalleryStore = create<GalleryStore>((set) => ({
   selectedCert: null,
   setSelectedCert: (cert) => set({ selectedCert: cert }),
 }));
+
+// modifed by shaurya

@@ -199,3 +199,5 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
+// modifed by shaurya

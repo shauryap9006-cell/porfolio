@@ -28,3 +28,5 @@ export const certificates = [
     description: "Mastered React, CSS frameworks, and modern web performance optimization techniques.",
   },
 ];
+
+// modifed by shaurya

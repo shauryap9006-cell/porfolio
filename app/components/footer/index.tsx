@@ -115,3 +115,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// modifed by shaurya

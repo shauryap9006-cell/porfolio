@@ -103,3 +103,5 @@ const CanvasLoader = (props: { children: React.ReactNode }) => {
 };
 
 export default CanvasLoader;
+
+// modifed by shaurya

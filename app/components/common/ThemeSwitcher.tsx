@@ -46,3 +46,5 @@ const ThemeSwitcher = () => {
 };
 
 export default ThemeSwitcher;
+
+// modifed by shaurya

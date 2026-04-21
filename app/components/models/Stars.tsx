@@ -1,4 +1,3 @@
-
 import { useThemeStore } from "@/app/stores";
 import { Stars } from "@react-three/drei";
 
@@ -13,3 +12,5 @@ const StarsContainer = () => {
 };
 
 export default StarsContainer;
+
+// modifed by shaurya

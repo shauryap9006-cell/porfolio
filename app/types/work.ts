@@ -7,3 +7,5 @@ export interface WorkTimelinePoint {
   subtitle?: string,
   position: 'left' | 'right',
 }
+
+// modifed by shaurya

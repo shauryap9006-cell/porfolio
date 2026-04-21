@@ -13,3 +13,5 @@ This is my personal portfolio website built in 3D. LFG!
 - GSAP
 - Zustand
 - Tailwind
+
+<!-- modifed by shaurya -->

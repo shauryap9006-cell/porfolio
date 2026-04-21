@@ -4,3 +4,5 @@ export interface FooterLink {
   url: string;
   icon: string;
 }
+
+// modifed by shaurya

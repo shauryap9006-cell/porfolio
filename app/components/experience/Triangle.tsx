@@ -24,3 +24,5 @@ export function TriangleGeometry({ points }: { points: number[][] }) {
 
   return geometry;
 }
+
+// modifed by shaurya

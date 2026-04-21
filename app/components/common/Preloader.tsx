@@ -27,3 +27,5 @@ const Preloader = () => {
 }
 
 export default Preloader;
+
+// modifed by shaurya

@@ -164,3 +164,5 @@ const ProjectTile = ({ project, index, position, rotation, activeId, onClick }: 
 };
 
 export default ProjectTile;
+
+// modifed by shaurya

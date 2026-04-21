@@ -422,3 +422,5 @@ const ProjectAsset = ({ index, hovered }: ProjectAssetProps) => {
 };
 
 export default ProjectAsset;
+
+// modifed by shaurya

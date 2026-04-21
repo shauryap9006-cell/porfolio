@@ -145,3 +145,5 @@ const Timeline = ({ progress }: { progress: number }) => {
 };
 
 export default Timeline;
+
+// modifed by shaurya

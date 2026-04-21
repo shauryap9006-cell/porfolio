@@ -26,3 +26,5 @@ export const FOOTER_LINKS: FooterLink[] = [
     url: './Shaurya_Singh_Resume.pdf',
   }
 ];
+
+// modifed by shaurya

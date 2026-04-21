@@ -45,3 +45,5 @@ const Projects = () => {
 };
 
 export default Projects;
+
+// modifed by shaurya

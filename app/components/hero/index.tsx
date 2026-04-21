@@ -48,3 +48,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
+// modifed by shaurya

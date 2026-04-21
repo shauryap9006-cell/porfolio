@@ -38,3 +38,5 @@ export const WORK_TIMELINE: WorkTimelinePoint[] = [
     position: 'right',
   }
 ]
+
+// modifed by shaurya

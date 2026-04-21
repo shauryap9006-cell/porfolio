@@ -58,3 +58,5 @@ export const ScrollHint = () => {
     </div>
   );
 }
+
+// modifed by shaurya

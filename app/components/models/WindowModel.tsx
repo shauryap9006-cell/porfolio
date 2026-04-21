@@ -75,3 +75,5 @@ const WindowModel = (props: Partial<THREE.Object3D>) => {
 useGLTF.preload('models/window.glb');
 
 export default WindowModel;
+
+// modifed by shaurya

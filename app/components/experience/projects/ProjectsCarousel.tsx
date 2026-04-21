@@ -51,3 +51,5 @@ const ProjectsCarousel = () => {
 };
 
 export default ProjectsCarousel;
+
+// modifed by shaurya
