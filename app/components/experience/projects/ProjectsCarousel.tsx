@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useMemo, useState } from "react";
 import { isMobile } from "react-device-detect";
 import ProjectTile from "./ProjectTile";
@@ -53,3 +55,4 @@ const ProjectsCarousel = () => {
 export default ProjectsCarousel;
 
 // modifed by shaurya
+

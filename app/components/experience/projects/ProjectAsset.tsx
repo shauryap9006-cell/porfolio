@@ -391,6 +391,57 @@ const HourglassAsset = ({ hovered }: { hovered: boolean }) => {
 };
 
 /**
+ * ✨ Aura Prism — floating, glowing crystal / diamond.
+ */
+const AuraAsset = ({ hovered }: { hovered: boolean }) => {
+  const crystalRef = useRef<THREE.Mesh>(null);
+
+  useFrame((state) => {
+    if (crystalRef.current) {
+      crystalRef.current.position.y = Math.sin(state.clock.elapsedTime * 1.5) * 0.08;
+      crystalRef.current.rotation.y += 0.02;
+      crystalRef.current.rotation.z += 0.01;
+    }
+  });
+
+  useEffect(() => {
+    if (crystalRef.current) {
+      gsap.to(crystalRef.current.scale, {
+        x: hovered ? 1.3 : 1,
+        y: hovered ? 1.3 : 1,
+        z: hovered ? 1.3 : 1,
+        duration: 0.5,
+        ease: 'power2.out',
+      });
+    }
+  }, [hovered]);
+
+  return (
+    <group>
+      <mesh ref={crystalRef}>
+        <octahedronGeometry args={[0.35, 0]} />
+        <meshPhysicalMaterial
+          color="#00f2ff"
+          metalness={0.2}
+          roughness={0}
+          transmission={0.9}
+          thickness={0.5}
+          ior={2.4}
+          clearcoat={1}
+          emissive="#00f2ff"
+          emissiveIntensity={hovered ? 0.8 : 0.4}
+        />
+      </mesh>
+      {/* Subtle outer glow layer */}
+      <mesh scale={[1.1, 1.1, 1.1]}>
+        <octahedronGeometry args={[0.35, 0]} />
+        <meshBasicMaterial color="#00f2ff" transparent opacity={0.1} wireframe />
+      </mesh>
+    </group>
+  );
+};
+
+/**
  * Main factory component — renders the correct 3D asset based on project index.
  *
  * Index mapping (matches projects.ts order):
@@ -401,6 +452,7 @@ const HourglassAsset = ({ hovered }: { hovered: boolean }) => {
  * 4 = MoodFlick AI      → Movie Reel
  * 5 = AI Chatbot        → Robot
  * 6 = Focus Clock       → Hourglass
+ * 7 = Aura Portfolio    → Aura Prism
  */
 const ProjectAsset = ({ index, hovered }: ProjectAssetProps) => {
   const assets = [
@@ -411,6 +463,7 @@ const ProjectAsset = ({ index, hovered }: ProjectAssetProps) => {
     <MovieReelAsset key={4} hovered={hovered} />,
     <RobotAsset key={5} hovered={hovered} />,
     <HourglassAsset key={6} hovered={hovered} />,
+    <AuraAsset key={7} hovered={hovered} />,
   ];
 
   return (

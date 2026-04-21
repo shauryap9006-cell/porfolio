@@ -1,3 +1,5 @@
+'use client';
+
 import { useFrame, useThree } from "@react-three/fiber";
 import { useEffect, useRef, useState } from "react";
 
@@ -120,3 +122,4 @@ export const TouchPanControls = () => {
 }
 
 // modifed by shaurya
+

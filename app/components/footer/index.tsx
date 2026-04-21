@@ -1,10 +1,11 @@
+'use client';
+
 import { Svg, Text, useCursor, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 import { isMobile } from "react-device-detect";
 import * as THREE from "three";
-import { withBase } from "@constants/pathConfig";
 import { FOOTER_LINKS } from "../../constants";
 import { FooterLink } from "../../types";
 
@@ -25,7 +26,7 @@ const FooterLinkItem = ({ link }: { link: FooterLink }) => {
   };
 
   const fontProps = {
-    font: withBase("Vercetti-Regular.woff"),
+    font: "./Vercetti-Regular.woff",
     fontSize: 0.2,
     color: 'white',
     onPointerOver,
@@ -100,7 +101,7 @@ const Footer = () => {
     return FOOTER_LINKS.map((link, i) => {
       return (
         <group key={i} position={[i * (isMobile ? 1.1 : 2), 0, 0]}>
-          <FooterLinkItem link={link}/>
+          <FooterLinkItem link={link} />
         </group>
       );
     });
@@ -109,7 +110,7 @@ const Footer = () => {
   return (
     <group position={[0, -44, 18]} rotation={[-Math.PI / 2, 0, 0]} ref={groupRef}>
       <group position={[isMobile ? -1.65 : -3, 0, 0]}>
-        { getLinks() }
+        {getLinks()}
       </group>
     </group>
   );
@@ -118,3 +119,4 @@ const Footer = () => {
 export default Footer;
 
 // modifed by shaurya
+

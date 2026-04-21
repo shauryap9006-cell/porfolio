@@ -1,3 +1,5 @@
+'use client';
+
 import { ScrollControls } from "@react-three/drei";
 import { usePortalStore, useScrollStore } from "@stores";
 import { useEffect } from "react";
@@ -60,3 +62,4 @@ const Work = () => {
 export default Work;
 
 // modifed by shaurya
+

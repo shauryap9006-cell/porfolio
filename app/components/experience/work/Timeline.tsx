@@ -1,3 +1,5 @@
+'use client';
+
 import { Box, Edges, Line, Text, TextProps } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { usePortalStore } from "@stores";
@@ -5,7 +7,6 @@ import gsap from "gsap";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { isMobile } from "react-device-detect";
 import * as THREE from "three";
-import { withBase } from "@constants/pathConfig";
 
 import { WORK_TIMELINE } from "@constants";
 import { WorkTimelinePoint } from "@types";
@@ -25,7 +26,7 @@ const TimelinePoint = ({ point, diff }: { point: WorkTimelinePoint, diff: number
   const textAlign = point.position === 'left' ? 'right' : 'left';
 
   const textProps: Partial<TextProps> = useMemo(() => ({
-    font: withBase("Vercetti-Regular.woff"),
+    font: "./Vercetti-Regular.woff",
     color: "white",
     anchorX: textAlign,
     fillOpacity: 2 - 2 * diff,
@@ -33,7 +34,7 @@ const TimelinePoint = ({ point, diff }: { point: WorkTimelinePoint, diff: number
 
   const titleProps = useMemo(() => ({
     ...textProps,
-    font: withBase("soria-font.ttf"),
+    font: "./soria-font.ttf",
     fontSize: 0.6,
     maxWidth: 3,
   }), [textProps]);
@@ -148,3 +149,4 @@ const Timeline = ({ progress }: { progress: number }) => {
 export default Timeline;
 
 // modifed by shaurya
+

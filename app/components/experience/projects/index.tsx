@@ -1,3 +1,5 @@
+'use client';
+
 import { useScroll } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import gsap from "gsap";
@@ -47,3 +49,4 @@ const Projects = () => {
 export default Projects;
 
 // modifed by shaurya
+

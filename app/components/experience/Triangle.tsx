@@ -1,3 +1,5 @@
+'use client';
+
 import * as THREE from "three";
 
 export function TriangleGeometry({ points }: { points: number[][] }) {
@@ -26,3 +28,4 @@ export function TriangleGeometry({ points }: { points: number[][] }) {
 }
 
 // modifed by shaurya
+

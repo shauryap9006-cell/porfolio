@@ -1,3 +1,5 @@
+'use client';
+
 import { useScroll, Stars, Cloud, Clouds } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import gsap from "gsap";
@@ -201,3 +203,4 @@ const Gallery = () => {
 export default Gallery;
 
 // modifed by shaurya
+

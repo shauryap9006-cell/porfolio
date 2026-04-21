@@ -1,3 +1,5 @@
+'use client';
+
 import { Cloud, Clouds } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { useThemeStore } from "@stores";
@@ -97,3 +99,4 @@ const ThemeTransition = () => {
 export default ThemeTransition;
 
 // modifed by shaurya
+

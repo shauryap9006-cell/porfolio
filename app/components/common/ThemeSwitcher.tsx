@@ -1,3 +1,5 @@
+'use client';
+
 // import "react-crud-icons/dist/react-crud-icons.css";
 
 import { useGSAP } from "@gsap/react";
@@ -48,3 +50,4 @@ const ThemeSwitcher = () => {
 export default ThemeSwitcher;
 
 // modifed by shaurya
+

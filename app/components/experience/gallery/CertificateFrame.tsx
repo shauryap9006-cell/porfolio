@@ -1,3 +1,5 @@
+'use client';
+
 import { Image, Text, Float, Edges } from "@react-three/drei";
 import { useMemo, useRef, useState, useEffect } from "react";
 import * as THREE from "three";
@@ -57,7 +59,7 @@ const CertificateFrame = ({
 
   useEffect(() => {
     if (!frameRef.current) return;
-    const [,,, textGroup] = frameRef.current.children;
+    const [, , , textGroup] = frameRef.current.children;
 
     gsap.to(frameRef.current.scale, {
       x: isHighlighted ? 1.15 : 1,
@@ -122,7 +124,7 @@ const CertificateFrame = ({
         {/* Text Info (Small, floating below) */}
         <group position={[0, -1.5, 0.1]}>
           <Text
-            font={withBase("soria-font.ttf")}
+            font="./soria-font.ttf"
             fontSize={0.25}
             color="white"
             anchorX="center"
@@ -131,7 +133,7 @@ const CertificateFrame = ({
             {title.toUpperCase()}
           </Text>
           <Text
-            font={withBase("soria-font.ttf")}
+            font="./soria-font.ttf"
             fontSize={0.15}
             color="#aaa"
             position={[0, -0.25, 0]}
@@ -143,7 +145,7 @@ const CertificateFrame = ({
 
           {description && (
             <Text
-              font={withBase("Vercetti-Regular.woff")}
+              font="./Vercetti-Regular.woff"
               fontSize={0.12}
               color="#ccc"
               position={[0, -0.6, 0]}
@@ -170,3 +172,4 @@ const CertificateFrame = ({
 export default CertificateFrame;
 
 // modifed by shaurya
+

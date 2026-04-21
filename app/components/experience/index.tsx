@@ -1,10 +1,11 @@
+'use client';
+
 import { Text, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { usePortalStore, useThemeStore } from "@stores";
 import { useRef } from "react";
 import { isMobile } from "react-device-detect";
 import * as THREE from 'three';
-import { withBase } from "@constants/pathConfig";
 import GridTile from "./GridTile";
 import Gallery from "./gallery";
 import Projects from "./projects";
@@ -18,7 +19,7 @@ const Experience = () => {
   const isActive = usePortalStore((state) => !!state.activePortalId);
 
   const fontProps = {
-    font: withBase("soria-font.ttf"),
+    font: "./soria-font.ttf",
     fontSize: 0.4,
     color: 'white',
   };
@@ -101,3 +102,4 @@ const Experience = () => {
 export default Experience;
 
 // modifed by shaurya
+

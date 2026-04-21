@@ -1,3 +1,5 @@
+'use client';
+
 import gsap from "gsap";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -60,3 +62,4 @@ export const ScrollHint = () => {
 }
 
 // modifed by shaurya
+

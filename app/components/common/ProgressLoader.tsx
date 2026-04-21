@@ -1,3 +1,5 @@
+'use client';
+
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
@@ -123,3 +125,4 @@ const ProgressLoader = ({ progress }: { progress: number }) => {
 export default dynamic(() => Promise.resolve(ProgressLoader), { ssr: false });
 
 // modifed by shaurya
+

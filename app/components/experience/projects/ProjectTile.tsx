@@ -1,10 +1,11 @@
+'use client';
+
 import { Edges, Text, TextProps } from "@react-three/drei";
 import { ThreeEvent } from "@react-three/fiber";
 import gsap from "gsap";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { isMobile } from "react-device-detect";
 import * as THREE from "three";
-import { withBase } from "@constants/pathConfig";
 
 import { usePortalStore } from "@stores";
 import { Project } from "@types";
@@ -26,12 +27,12 @@ const ProjectTile = ({ project, index, position, rotation, activeId, onClick }: 
   const isProjectSectionActive = usePortalStore((state) => state.activePortalId === "projects");
 
   const titleProps = useMemo(() => ({
-    font: withBase("soria-font.ttf"),
+    font: "./soria-font.ttf",
     color: "black",
   }), []);
 
   const subtitleProps: Partial<TextProps> = useMemo(() => ({
-    font: withBase("Vercetti-Regular.woff"),
+    font: "./Vercetti-Regular.woff",
     color: "black",
     anchorX: "left",
     anchorY: "top",
@@ -167,3 +168,4 @@ const ProjectTile = ({ project, index, position, rotation, activeId, onClick }: 
 export default ProjectTile;
 
 // modifed by shaurya
+

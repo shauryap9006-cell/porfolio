@@ -17,6 +17,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   reactStrictMode: false,
+  transpilePackages: ['three', 'gsap', '@react-three/drei'],
   env: {
     googleAnalyticsId: process.env.NODE_ENV === "production" ? process.env.GA_MEASUREMENT_ID : "",
   }
